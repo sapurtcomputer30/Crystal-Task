@@ -15,12 +15,13 @@ First add the class file to your project
  ```
  
  
- Subscribe to required events
+ Subscribe to required events and Start
   ```csharp
 taskMgr.ScedulerStart += Task_ScedulerStart;
 taskMgr.ScedulerStop += Task_ScedulerStop;
 taskMgr.TaskExecuted += Task_TaskExecuted;
 taskMgr.TaskScedulated += Task_TaskScedulated;
+taskMgr.Start();
  ```
  
 <h2>Schedule a Task</h2>
