@@ -1,4 +1,3 @@
-﻿using ProtoBuf;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,11 +25,8 @@ namespace CrystalSceduler
         {
             tasks = new List<TaskFactory>();
         }
-        public void Start()
-        {
-            Task.Run(() => _task.StartAsync().Wait());
-        }
-        private async Task StartAsync()
+        
+        public async Task StartAsync()
         {
             if (ScedulerStart != null) { ScedulerStart(); }
             while (true)
